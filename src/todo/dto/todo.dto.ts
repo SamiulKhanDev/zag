@@ -1,10 +1,8 @@
-
-class TodoDto
-{
-    id:Number
-    name:String
-    description: String
-    isCompleted:Boolean
+class TodoDto {
+  id: Number
+  name: String
+  description: String
+  isCompleted: Boolean
 }
 
-export {TodoDto}
+export { TodoDto }

@@ -1,19 +1,19 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class TodoEntity {
   @PrimaryGeneratedColumn()
-  id: Number;
-    
-    @Column()
-    userId:String
+  id: Number
 
   @Column()
-  name: String;
+  userId: String
 
   @Column()
-  description: String;
+  name: String
+
+  @Column()
+  description: String
 
   @Column({ default: false })
-  isCompleted: boolean;
+  isCompleted: boolean
 }
