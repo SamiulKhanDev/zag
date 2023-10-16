@@ -17,8 +17,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
           host: configService.get('HOST'),
           port: configService.get('PORT'),
           username: configService.get('USERNAME'),
-          password: configService.get('PASSWORD'),
-          database: 'test',
+          password: configService.get('PASSWORD_DB'),
+          database: configService.get('NAME'),
           entities: [TodoEntity],
           synchronize: true,
         }
