@@ -10,10 +10,13 @@ npm run start:dev
 ```
 
 **NOTE** \
-The otp based authentication uses SMTP(Simple Mail Transfering Protocol) for which Google has blocked uses of low priority applications with an Email. So the email you are using make sure you have created a separate password for the app.
+The otp based authentication uses SMTP(Simple Mail Transfering Protocol) for which
+Google has blocked uses of low priority applications with an Email. So the email
+you are using make sure you have created a separate password for the app.
 
 **NOTE** \
-Make sure to define your own database host, port, username, password, database in app.module.ts file.
+Make sure to define your own database host, port, username, password, database in
+app.module.ts file.
 
 **NOTE** \
 The Otp expires in 2mins where the access token expires in 1d.
@@ -93,12 +96,23 @@ The Otp expires in 2mins where the access token expires in 1d.
 
 ## Environment Variables
 
-Please make sure you add a .env file to the root of the project. The file contents should look like this
+Please make sure you add a .env file to the root of the project. The file
+contents should look like this
 
 ```
 EMAIL=your email address
 
 PASSWORD=your password
 
-secret=your jwt secret
+SECRET=your jwt secret
+
+HOST=youy mysql server
+
+PORT=your mysql server port
+
+USERNAME=your mysql server username
+
+PASSWORD_DB=your mysql server password
+
+NAME=your mysql server database name
 ```
