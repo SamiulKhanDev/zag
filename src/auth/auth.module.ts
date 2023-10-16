@@ -14,12 +14,14 @@ import { ConfigService } from '@nestjs/config'
     JwtModule.registerAsync({
       global: true,
       inject: [ConfigService],
-      useFactory: async (configService: ConfigService) => ({
-        secret: configService.get('secret'),
-        signOptions: {
-          expiresIn: '1d',
-        },
-      }),
+      useFactory: async (configService: ConfigService) => {
+        return {
+          secret: configService.get('SECRET'),
+          signOptions: {
+            expiresIn: '1d',
+          },
+        }
+      },
     }),
     ConfigModule.forRoot(),
   ],
